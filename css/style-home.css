@@ -289,6 +289,52 @@
   cursor: pointer;
 }
 
+/*Portfolio page*/
+/* Portfolio Modal */
+.port-modal {
+  display: none; /* Hide modal box by default */
+  position: fixed;
+  z-index: 1;
+  right: 0; /* Position to the right side */
+  top: 0;
+  width: 40%; /* Adjust width as needed */
+  height: 40%; /* Make modal box cover the whole viewport */
+  overflow: auto; /* Enable scrolling if needed */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  padding-top: 60px; /* Add space for the close button */
+}
+
+
+.port-modal-content {
+  margin-left: 20px; /* Adjust as needed */
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Portfolio Close button */
+.port-modal-content .close {
+  color: #ffffff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.port-modal-content .close:hover,
+.port-modal-content .close:focus {
+  color: rgb(253, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 
 .modal-body {padding: 30px;}
