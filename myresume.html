@@ -11,6 +11,27 @@
 
     <!-- linking Stylesheet CSS  -->
    <link rel="stylesheet" href="css/style-home.css">
+
+   <style>
+    /* Add some styles to position the print button */
+    .print-button-container {
+        text-align: right;
+        margin: 20px;
+    }
+
+    .print-button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
    
   </head>
 
@@ -32,45 +53,40 @@
         <a href="contactme.html">Contact Me</a>
       </div>
 
+      <!-- Print Button -->
+      <div class="print-button-container">
+        <button class="print-button" onclick="window.print()">Print</button>
+      </div>
+
     <!-- The flexible grid (content) -->
     <div class="container">
       <div class="main">
-          
           <div class="information">
-            <h3>Courses</h3><br>
+              <h3>Courses</h3><br>
               <div class="about">
-                <span>Jun'21 - Jul'21</span>
-                  <h4>Programming 1, using C#</h4> 
+                  <span>Jun'21 - Jul'21</span>
+                  <h4>Programming 1, using C#</h4>
                   <p>NTI School, Stockholm. </p>
-                  <p>Gaining knowledge and understanding on basic searching and sorting
-                  algorithms, multidimensional arrays and analyzing C++ function to determine
-                  its computational complexity.
-                  </p>
+                  <p>Gaining knowledge and understanding on basic searching and sorting algorithms, multidimensional arrays and analyzing C++ function to determine its computational complexity.</p>
                   <p>Tools used: Visual Studio Code.</p><br>
-                
-                <span>2020</span>
+
+                  <span>2020</span>
                   <h4>Svenska som andraspråk 2 & 3</h4>
                   <p>Hermods AB, Uppsala.</p>
-                  <p>Achieved skills to use Swedish as second language in professional level.
-                  </p>
+                  <p>Achieved skills to use Swedish as second language in professional level.</p>
                   <p>Tools used: MS Word, MS PowerPoint.</p><br>
-                
-                <span>2019</span>
+
+                  <span>2019</span>
                   <h4>Svenska som andraspråk 1</h4>
                   <p>Hermods AB, Uppsala.</p>
-                  <p>Achieved skills to use Swedish as second language in professional level.
-                  </p>
+                  <p>Achieved skills to use Swedish as second language in professional level.</p>
                   <p>Tools used: MS Word, MS PowerPoint.</p><br>
-                
-                <span>2019</span>
+
+                  <span>2019</span>
                   <h4>Web Development 1 & 2</h4>
                   <p>Hermods AB, Uppsala.</p>
-                  <p>Achieved knowledge about web development and the web technologies that
-                  websites are based on. Also learned to create structure and design with style
-                  templates, handle the basics of HTML, JavaScripts and CSS.</p>
+                  <p>Achieved knowledge about web development and the web technologies that websites are based on. Also learned to create structure and design with style templates, handle the basics of HTML, JavaScripts and CSS.</p>
                   <p>Tools used: Visual Studio Code, Notepad++.</p><br>
-
-                
               </div>
           </div>
       </div>
@@ -150,8 +166,7 @@
       </div>
           
     </div>
-    <!-- <script src="education.js"></script> -->
-   
+    
   </body>
 
 </html>
