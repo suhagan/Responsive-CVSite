@@ -58,8 +58,13 @@
         <button class="print-button" onclick="window.print()">Print</button>
       </div>
 
+      <!-- Screenshot and PDF Button -->
+    <div class="print-button-container">
+      <button class="print-button" onclick="generatePDF()">Save as PDF</button>
+  </div>
+
     <!-- The flexible grid (content) -->
-    <div class="container">
+    <div class="container" id="resume-content">
       <div class="main">
           <div class="information">
               <h3>Courses</h3><br>
@@ -167,6 +172,48 @@
           
     </div>
     
+    <!-- Include html2canvas and jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- JavaScript to handle the screenshot and PDF generation -->
+    <script>
+        async function generatePDF() {
+            const { jsPDF } = window.jspdf;
+
+            // Exclude the navigation bar from the screenshot
+            const element = document.getElementById('resume-content');
+
+            // Use html2canvas to capture the screenshot
+            const canvas = await html2canvas(element, { scale: 2 });
+            const imgData = canvas.toDataURL('image/png');
+
+            // Create a jsPDF instance
+            const pdf = new jsPDF('p', 'pt', 'a4');
+
+            // Calculate the image dimensions to fit within the PDF page
+            const imgWidth = 595.28;
+            const pageHeight = 841.89;
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            let heightLeft = imgHeight;
+
+            let position = 0;
+
+            // Add the image to the PDF
+            pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+            heightLeft -= pageHeight;
+
+            while (heightLeft >= 0) {
+                position = heightLeft - imgHeight;
+                pdf.addPage();
+                pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+                heightLeft -= pageHeight;
+            }
+
+            // Save the PDF
+            pdf.save('resume.pdf');
+        }
+    </script>
   </body>
 
 </html>
