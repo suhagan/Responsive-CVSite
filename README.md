@@ -69,7 +69,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 For any queries or feedback, please contact Suhagan Mostahid at:
 
-- **Email**: [suhagan@example.com](mailto:suhagan@example.com)
+- **Email**: [suhaganmostahid@yahoo.com](mailto:suhaganmostahid@yahoo.com)
 - **LinkedIn**: [Suhagan's LinkedIn](https://www.linkedin.com/in/suhagan-mostahid)
 
 Thank you for visiting my resume website repository!
