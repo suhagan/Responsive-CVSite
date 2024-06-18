@@ -1,133 +1,52 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <title>Suhagan's Responsive Resume Website</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <!-- font awesome cdn link  -->
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<head>
+    <title>Suhagan's Responsive Resume Website</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-        <!-- linking Stylesheet CSS  -->
-       <link rel="stylesheet" href="css/style-home.css">
+    <!-- linking Stylesheet CSS  -->
+    <link rel="stylesheet" href="css/style-home.css">
 
-       <script>
-        // Easter egg 1: Clicking on an odd part of the website to change background
-        document.addEventListener('DOMContentLoaded', function() {
-          var oddElement = document.querySelector('.main__image'); // You can choose any odd element
-          oddElement.addEventListener('click', function() {
-            document.body.style.backgroundColor = getRandomColor();
-          });
-        });
-    
-        // Easter egg 2: Typing a combination on the keyboard to show a popup message
-        var combinationCode = [];
-      var combinationSequence = [1, 3, 3, 7];
-      document.addEventListener('keydown', function(event) 
-                                           {
-                                              combinationCode.push(event.keyCode);
-                                              if (combinationCode.length > combinationSequence.length) 
-                                              {
-                                                combinationCode.shift();
-                                              }
-                                              else 
-                                              {
-                                                arraysEqual(combinationCode, combinationSequence);
-                                                var text = "You found the Easter egg! 🎉"; 
-                                                showModal(text);
-                                                combinationCode = [];
-                                              }
-                                            }
-                                  );
-  
-      // Utility function to compare arrays
-      function arraysEqual(arr1, arr2) 
-      {
-        if (arr1.length !== arr2.length)
-        {
-          return false;
-        }
-        
-        for (var i = 0; i < arr1.length; i++) 
-        {
-          if (arr1[i] !== arr2[i]) 
-          {
-            return false;
-          }
-        }
-        return true;
-      }
-    
-        // Utility function to generate random color
-        function getRandomColor() {
-          var letters = '0123456789ABCDEF';
-          var color = '#';
-          for (var i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-          }
-          return color;
-        }
-    
-        // Utility function to show modal
-        function showModal(message) {
-          var modal = document.createElement('div');
-          modal.classList.add('easter-modal');
-          modal.innerHTML = '<div class="easter-modal-content">' +
-                            '<span class="easter-close">&times;</span>' +
-                            '<p>' + message + '</p>' +
-                            '</div>';
-          document.body.appendChild(modal);
-          var closeButton = modal.querySelector('.easter-close');
-          closeButton.addEventListener('click', function() {
-            modal.remove();
-          });
-        }
-      </script>
-    </head>
-    <body>
+    <!-- Linking the Easter Egg JavaScript files -->
+    <script src="js/EasterEggOne.js" defer></script>
+    <script src="js/EasterEggTwo.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>Suhagan Mostahid</h1>
+        <p>Full-stack Developer</p>
+        <p>Student @ Chas Academy, Stockholm.</p>
+    </div>
 
-            <!-- Header -->
-            <div class="header">
-                <h1>Suhagan Mostahid</h1>
-                <p>Full-stack Developer</p>
-                <p>Student @ Chas Academy, Stockholm.</p>
-            </div>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a class="active" href="index.html">Home</a>
+        <a href="aboutme.html">About Me</a>
+        <a href="myportfolio.html">My Portfolio</a>
+        <a href="myresume.html">My Resume</a>
+        <a href="contactme.html">Contact Me</a>
+    </div>
 
-        
-            <!-- Navigation Bar -->
-            <div class="navbar">
-                <a class="active" href="index.html">Home</a>
-                <a href="aboutme.html">About Me</a>
-                <a href="myportfolio.html">My Portfolio</a>
-                <a href="myresume.html">My Resume</a>
-                <a href="contactme.html">Contact Me</a>
-            </div>
-
-            <!-- The flexible grid (content) -->
-            <div class="container">
-                <div class="main">
-                    
-                    <div class="information">
-
-                        <div class="about">
-                            <p><i>"You are stepping into my digital realm! Delve into my professional narrative, journey through defining projects, and uncover the essence of my skills and passions. Whether you seek background insights, portfolio exploration, or direct communication, I'm delighted to welcome you. Take your time to traverse the pages and delve deeper into the driving force behind my endeavors. Thank you for visiting!"</i></p>
-                            
-                            <h2>- Suhagan!</h2>
-                            
-                        </div>
-                    </div>
+    <!-- The flexible grid (content) -->
+    <div class="container">
+        <div class="main">
+            <div class="information">
+                <div class="about">
+                    <p>"You are stepping into my digital realm! Delve into my professional narrative, journey through defining projects, and uncover the essence of my skills and passions. Whether you seek background insights, portfolio exploration, or direct communication, I'm delighted to welcome you. Take your time to traverse the pages and delve deeper into the driving force behind my endeavors. Thank you for visiting!"</p>
+                    <h2>- Suhagan!</h2>
                 </div>
-            
-                <div class="side" style="background-color: rgb(255, 255, 255);">
-                    <div class="main__image">
-                        <img style="height: 200; width: 300;" src = "images/woman-programmer.png" alt="woman-programmer" class="main__img">
-                    </div>
-                    
-                    
-                </div>
-                    
             </div>
-
-    </body>
+        </div>
+        <div class="side" >
+            <div class="main__image">
+                <img class="main__img" src="images/woman-programmer.png" alt="woman-programmer" >
+            </div>
+        </div>
+    </div>
+</body>
 </html>
