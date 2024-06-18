@@ -1,86 +1,98 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
-
-*{
+* {
   font-family: 'Poppins', sans-serif;
-  margin:0; padding:0;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  outline: none; border:none;
+  outline: none;
+  border: none;
   text-decoration: none;
   transition: all .2s linear;
 }
 
-* {
-    box-sizing: border-box;
-  }
-  
+body {
+  font-family: Arial;
+  margin: 0;
+}
 
-  /* Style the body */
-  body {
-    font-family: Arial;
-    margin: 0;
-  }
-  
-  /* Header/logo Title */
-  .header {
-    padding: 60px;
-    text-align: center;
-    background: #e42e6169;
-    color: white;
-  }
-  
-  /* Style the top navigation bar */
-  .navbar {
-    display: flex;
-    background-color: #333;
-  }
-  
-  /* Style the navigation bar links */
-  .navbar a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  /* Change color on hover */
-  .navbar a:hover {
-    background-color: rgb(221, 221, 221);
-    color: black;
-  }
+/* Header/logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #e42e6169;
+  color: white;
+}
 
-  /* Change color on active */
-  .active {
-    background-color: rgb(6, 190, 46);
-    color: black;
-  }
-  
-  /* Column container */
-  .container {  
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  /* Side column */
-  .side {
-    flex: 45%;
-    background-color: #f1f1f1;
-    padding: 20px;
-    text-align:left;
-  }
-  
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #333;
+}
 
-  /* Main column */
-  .main {
-    flex: 55%;
-    background-color: white;
-    padding: 100px;
-  }
-  
-  /* Styling for the Easter egg 1: Clicking on an odd part of the website */
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: rgb(221, 221, 221);
+  color: black;
+}
+
+/* Change color on active */
+.active {
+  background-color: rgb(6, 190, 46);
+  color: black;
+}
+
+/* Column container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Side column */
+.side {
+  flex: 45%;
+  background-color: #ffffff;
+  padding: 10px;
+  text-align: left;
+  height: 100%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px; 
+}
+
+
+.side__image {
+  width: 100%;
+}
+
+/* Main column */
+.main {
+  flex: 55%;
+  background-color: white;
+  padding: 100px;
+}
+
+/* Styling for the Easter egg 1: Clicking on an odd part of the website */
 .main__image {
   cursor: pointer; /* Change cursor to pointer to indicate clickability */
+  height: 100%;
+  /* width:fit-content; */
+  display: flex;
+  justify-content: center;
 }
+.main__img {
+  width: 100%;
+}
+
 
 /* Styling for the Easter egg 2: Modal popup */
 .easter-modal {
@@ -116,164 +128,166 @@
 .easter-close:hover {
   color: rgb(4, 230, 34);
 }
-  .share a{
-    height: 50px;
-    width: 50px;
-    line-height: 50px;
-    font-size: 20px;
-    border-radius: 50%;
-  }
-  
-  .share a:hover{
-    background: var(--blue);
-    color:var(--white);
-  }
 
-  .information{
-    flex:1 1 1000px;
-    background: var(--white);
-    padding:20px 30px;
-  }
+.share a {
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 50%;
+}
 
-  .information .about p{
-    font-size: 15px;
-    line-height: 2;
-    padding-bottom: 10px;
-    color:var(--light-color);
-  }
+.share a:hover {
+  background: var(--blue);
+  color: var(--white);
+}
 
-  .information .about .box-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap:15px;
-  }
+.information {
+  flex: 1 1 1000px;
+  background: var(--white);
+  padding: 20px 30px;
+}
 
-  .information .about .box-container .box{
-    flex:1 1 250px;
-  }
+.information .about p {
+  font-size: 15px;
+  line-height: 2;
+  padding-bottom: 10px;
+  color: var(--light-color);
+}
 
-  .information .about .box-container .box h3{
-    font-size: 15px;
-    padding:10px 0;
-    color:var(--black);
-  }
-  
+.information .about .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 
-  .side .information p{
-    font-size: 15px;
-    line-height: 2;
-    padding-bottom: 10px;
-    color:var(--light-color);
-  }
+.information .about .box-container .box {
+  flex: 1 1 250px;
+}
 
-  .side .information ul{
-    font-size: 15px;
-    line-height: 2;
-    padding-bottom: 10px;
-    padding-left: 15px;
-    color:var(--light-color);
-  }
+.information .about .box-container .box h3 {
+  font-size: 15px;
+  padding: 10px 0;
+  color: var(--black);
+}
 
-  
+.side .information p {
+  font-size: 15px;
+  line-height: 2;
+  padding-bottom: 10px;
+  color: var(--light-color);
+}
 
-  .project{
-    margin:20px 0;
-  }
+.side .information ul {
+  font-size: 15px;
+  line-height: 2;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  color: var(--light-color);
+}
 
-  .project .box-container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 10px;
-  }
+.project {
+  margin: 20px 0;
+}
 
-  .project .box-container .box{
-    padding:20px;
-    border-radius: 5px;
-    flex:1 1 25px;
-    background: var(--light-bg);
-  }
+.project .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px;
+}
 
-  .project .box-container .box h3{
-    color:var(--black);
-    font-size: 17px;
-    padding:5px 0;
-  }
+.project .box-container .box {
+  padding: 20px;
+  border-radius: 5px;
+  flex: 1 1 25px;
+  background: var(--light-bg);
+}
 
-  .project .box-container .box span{
-    font-size: 12px;
-  }
+.project .box-container .box h3 {
+  color: var(--black);
+  font-size: 17px;
+  padding: 5px 0;
+}
 
-  .project .box-container .box p{
-    color:var(--light-color);
-    line-height: 2;
-    font-size: 14px;
-  }
+.project .box-container .box span {
+  font-size: 12px;
+}
 
-  /* contact page*/
-  input,textarea{
-    height: 100%;
-    width: 100%;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    background: #F0F1F8;
-    border-radius: 6px;
-    padding: 0 15px;
-  }
-  .message-box{
-    min-height: 110px;
-  }
-  .button{
-    display: inline-block;
-    margin-top: 5px;
-  }
-  input[type="button"]{
-    color: #fff;
-    font-size: 18px;
-    outline: none;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 6px;
-    background: #e42e6169;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .button input[type="button"]:hover{
-    background: #333;
-  }
+.project .box-container .box p {
+  color: var(--light-color);
+  line-height: 2;
+  font-size: 14px;
+}
 
-  /* The Modal - contact page */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-  }
+/* contact page */
+input, textarea {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+}
 
-  /* The Close Button */
+.message-box {
+  min-height: 110px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+input[type="button"] {
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #e42e6169;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button input[type="button"]:hover {
+  background: #333;
+}
+
+/* The Modal - contact page */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
 .close {
   color: rgb(240, 2, 2);
   float: right;
@@ -303,7 +317,6 @@
   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
   padding-top: 60px; /* Add space for the close button */
 }
-
 
 .port-modal-content {
   margin-left: 20px; /* Adjust as needed */
@@ -335,16 +348,82 @@
   cursor: pointer;
 }
 
+.modal-body {
+  padding: 30px;
+}
 
-
-.modal-body {padding: 30px;}
-
-
-
-  /* Responsive layout - when the screen is less than 1200px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 1024px) {
-    .container, .navbar {   
-      flex-direction: column;
-    }
+/* Responsive layout - when the screen is less than 768px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 768px) {
+  .container, .navbar {
+    flex-direction: column;
   }
-  
+
+  .main__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .side_img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Additional responsiveness for smaller screens (max: 480px) */
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .side {
+    flex: 100%;
+    padding: 10px;
+    order: 2; /* Display the side content after the main content */
+  }
+
+  .main {
+    flex: 100%;
+    padding: 10px;
+    order: 1; /* Display the main content first */
+  }
+
+  .navbar a {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .header {
+    padding: 30px;
+  }
+
+  .project .box-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .share a {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    font-size: 16px;
+  }
+
+  input, textarea {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  input[type="button"] {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .main__img{
+    height: 100%;
+  }
+}
